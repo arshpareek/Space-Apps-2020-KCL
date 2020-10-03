@@ -41,11 +41,11 @@ if(os.path.isdir('train/yes')) is False:
     for x in range(int(numberOfYesImages * testSplit)) :
         filename = random.choice(os.listdir(yesDir))
         filePath = os.path.join(yesDir, filename)
-        shutil.move(filePath, 'valid/yes')
+        shutil.move(filePath, 'test/yes')
 
     for x in range(int(numberOfNoImages * testSplit)) :
         filename = random.choice(os.listdir(noDir))
         filePath = os.path.join(noDir, filename)
-        shutil.move(filePath, 'valid/no')
+        shutil.move(filePath, 'test/no')
 
 
